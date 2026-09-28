@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff7a3d">
+  <meta name="description" content="PetShop Amigo Fiel - banho, tosa, rações e muito carinho para seu pet.">
+  <title>PetShop Amigo Fiel</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <nav class="nav container">
+      <a class="logo" href="#inicio">
+        <img src="icons/icon-192.png" alt="Logo PetShop Amigo Fiel" width="42" height="42">
+        <span>Amigo <strong>Fiel</strong></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+      <ul class="menu" id="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#agendar">Agendar</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div>
+        <h1>Seu pet feliz,<br>você tranquilo 🐾</h1>
+        <p>Banho & tosa, consultas veterinárias, rações premium e brinquedos. Tudo em um só lugar, com muito amor.</p>
+        <a class="btn" href="#agendar">Agendar horário</a>
+        <button class="btn btn-outline" id="installBtn" hidden>📲 Instalar app</button>
+      </div>
+      <div class="hero-card">
+        <div class="paw-big">🐶</div>
+        <p class="destaque">Leve 10 no banho e ganhe o 11º grátis!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="servicos">
+    <div class="container">
+      <h2>Nossos serviços</h2>
+      <div class="cards">
+        <article class="card"><span>🛁</span><h3>Banho & Tosa</h3><p>Produtos suaves, secagem profissional e tosa higiênica.</p><p class="preco">a partir de R$ 49,90</p></article>
+        <article class="card"><span>🩺</span><h3>Veterinário</h3><p>Consultas, vacinas e acompanhamento de rotina.</p><p class="preco">a partir de R$ 89,90</p></article>
+        <article class="card"><span>✂️</span><h3>Estética</h3><p>Cortes de raça, hidratação e spa pet relaxante.</p><p class="preco">a partir de R$ 69,90</p></article>
+        <article class="card"><span>🏨</span><h3>Hotelzinho</h3><p>Day care e hospedagem com câmeras ao vivo.</p><p class="preco">a partir de R$ 59,90/dia</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao-alt" id="produtos">
+    <div class="container">
+      <h2>Produtos em destaque</h2>
+      <div class="cards">
+        <article class="card produto"><span>🦴</span><h3>Ração Premium 10kg</h3><p class="preco">R$ 189,90</p><button class="btn btn-mini" data-add="Ração Premium">Adicionar</button></article>
+        <article class="card produto"><span>🧸</span><h3>Brinquedo Mordedor</h3><p class="preco">R$ 24,90</p><button class="btn btn-mini" data-add="Brinquedo Mordedor">Adicionar</button></article>
+        <article class="card produto"><span>🛏️</span><h3>Caminha Conforto</h3><p class="preco">R$ 99,90</p><button class="btn btn-mini" data-add="Caminha Conforto">Adicionar</button></article>
+        <article class="card produto"><span>🥫</span><h3>Petisco Natural 300g</h3><p class="preco">R$ 19,90</p><button class="btn btn-mini" data-add="Petisco Natural">Adicionar</button></article>
+      </div>
+      <p class="carrinho">🛒 <span id="cartCount">0</span> itens no carrinho</p>
+    </div>
+  </section>
+
+  <section class="secao" id="agendar">
+    <div class="container narrow">
+      <h2>Agende um horário</h2>
+      <form id="formAgenda" class="form">
+        <label>Seu nome
+          <input type="text" name="nome" required placeholder="Maria Silva">
+        </label>
+        <label>Nome do pet
+          <input type="text" name="pet" required placeholder="Rex">
+        </label>
+        <label>Serviço
+          <select name="servico" required>
+            <option value="">Selecione...</option>
+            <option>Banho & Tosa</option>
+            <option>Consulta Veterinária</option>
+            <option>Estética / Spa</option>
+            <option>Hotelzinho</option>
+          </select>
+        </label>
+        <label>Data
+          <input type="date" name="data" required>
+        </label>
+        <button class="btn" type="submit">Confirmar agendamento</button>
+        <p id="msgAgenda" class="msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="secao secao-alt" id="contato">
+    <div class="container">
+      <h2>Contato</h2>
+      <p>📍 Rua dos Pets, 123 - Centro<br>📞 (11) 98765-4321<br>💌 contato@amigofiel.com.br</p>
+      <p>🕐 Seg a Sáb: 8h às 19h</p>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>© 2026 PetShop Amigo Fiel — feito com 🧡 para pets.</p>
+      <p class="status" id="offlineStatus"></p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
