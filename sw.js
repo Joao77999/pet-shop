@@ -1,12 +1,12 @@
-const CACHE = 'petshop-v1';
+const CACHE = 'petshop-v2';
 const ASSETS = [
   './',
   './index.html',
-  './css/style.css',
-  './js/app.js',
+  './style.css',
+  './app.js',
   './manifest.json',
-  './icons/icon-192.png',
-  './icons/icon-512.png'
+  './icon-192.png',
+  './icon-512.png'
 ];
 
 // Instala: pré-cacheia os arquivos principais
